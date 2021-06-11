@@ -4,7 +4,10 @@ Dhanush:
 Im able to push and Pull;
 
 Akshaya:
+<<<<<<< Updated upstream
 Im able to push and pull;
+=======
+>>>>>>> Stashed changes
 
 
 Ramanathan:
