@@ -1,2 +1,7 @@
 com\ev\EvRental.class
+com\ev\exceptions\UserNotFoundException.class
+com\ev\repositories\UserRepository.class
+com\ev\controllers\UserController.class
 com\ev\model\Login.class
+com\ev\services\UserService.class
+com\ev\entities\User.class
