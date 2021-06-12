@@ -1,13 +1,15 @@
 package com.ev.entities;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
 @Entity
-@Table(name="orders")
-public class Orders {
+public class Booking {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private int userId;
 	private String driver;
@@ -15,9 +17,9 @@ public class Orders {
 	private String status;
 	private int start_date;
 	private int end_date;
-	public Orders(int id, int userId, String driver, int bill, String status, int start_date, int end_date) {
+	public Booking(int userId, String driver, int bill, String status, int start_date, int end_date){
 		super();
-		this.id = id;
+		
 		this.userId = userId;
 		this.driver = driver;
 		this.bill = bill;
@@ -25,7 +27,7 @@ public class Orders {
 		this.start_date = start_date;
 		this.end_date = end_date;
 	}
-	@Id
+	
 	public int getId() {
 		return id;
 	}
@@ -73,3 +75,4 @@ public class Orders {
 	
 
 }
+

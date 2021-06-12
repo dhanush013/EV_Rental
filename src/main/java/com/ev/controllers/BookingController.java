@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ev.entities.Booking;
+import com.ev.services.BookingService;
 
-import com.shop.app.entity.User;
-import com.shop.app.exception.ExistingUserException;
-import com.shop.app.exception.UserNotFoundException;
-import com.shop.app.service.ookingervice;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/booking")
 
@@ -23,10 +21,14 @@ public class BookingController {
 		super();
 		this.bookingService=bookingService;
 	}
-	@PostMapping("/login")
-	public ResponseEntity<AuthenticationResponse> login(@RequestBody User user) throws UserNotFoundException{
-		return new ResponseEntity<AuthenticationResponse>(userService.validate(user),HttpStatus.OK);
+	@PostMapping
+	public ResponseEntity<Booking> addBooking(@RequestBody Booking booking){
+	
+		return new ResponseEntity<Booking>(bookingService.addBooking(booking),HttpStatus.CREATED);
+	
 	}
+	
+	
 	
 
 }

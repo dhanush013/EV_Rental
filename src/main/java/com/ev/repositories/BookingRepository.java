@@ -1,14 +1,12 @@
 package com.ev.repositories;
 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ev.entities.User;
+import com.ev.entities.Booking;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface BookingRepository extends JpaRepository<Booking, Integer> {
 
-	User findbyUserId(int userid);
-	
-	
 }
