@@ -7,9 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import com.ev.entities.Cars;
 
+import antlr.collections.List;
+
 @Repository
 public interface CarsRepository extends JpaRepository<Cars,Integer>{
 	
-	Cars findById(int id);
+	
 
 }

@@ -1,9 +1,13 @@
 package com.ev.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.ev.entities.Cars;
 import com.ev.repositories.CarsRepository;
+
+
 
 @Service
 public class CarServiceImpl implements CarService{
@@ -20,18 +24,13 @@ public class CarServiceImpl implements CarService{
 
 
 	@Override
-	public void addCars(int id, Cars cars) {
-		cars.setId(2);
-		cars.setCar_class("high");
-		cars.setCost(25);
-		cars.setMark("ford");
-		cars.setModel("sedan");
-		
-		Cars car=carsRepository.findById(id);
-		
-		carsRepository.save(car);
-		
+	public List<Cars> getCars() {
+		return carsRepository.findAll();
 	}
+
+
+
+	
 	
 
 }
