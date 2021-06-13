@@ -6,5 +6,6 @@ import com.ev.entities.Cars;
 
 public interface CarService {
   
-	public List<Cars> getCars();
+	Cars addCars(Cars cars);
+	List<Cars> showCars(Cars cars);
 }

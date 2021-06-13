@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ev.entities.Booking;
 import com.ev.services.BookingService;
 
-<<<<<<< Updated upstream
+
 @CrossOrigin
 @RestController
 @RequestMapping("/booking")
@@ -28,14 +28,7 @@ public class BookingController {
 		return new ResponseEntity<Booking>(bookingService.addBooking(booking),HttpStatus.CREATED);
 	
 	}
-=======
 
-
-public class BookingController {
-	
->>>>>>> Stashed changes
-	
-	
 	
 
 }
