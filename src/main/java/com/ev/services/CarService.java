@@ -1,8 +1,12 @@
 package com.ev.services;
 
+import java.util.List;
+
 import com.ev.entities.Cars;
 
 public interface CarService {
   
-	void addCars(int id,Cars cars);
+	Cars addCars(Cars cars);
+	List<Cars> showCars();
+	
 }

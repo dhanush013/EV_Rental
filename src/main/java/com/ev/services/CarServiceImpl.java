@@ -1,5 +1,8 @@
 package com.ev.services;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ev.entities.Cars;
@@ -7,11 +10,11 @@ import com.ev.repositories.CarsRepository;
 
 @Service
 public class CarServiceImpl implements CarService{
-
+   
 	private CarsRepository carsRepository;
 	
 	
-	
+	@Autowired
 	public CarServiceImpl(CarsRepository carsRepository) {
 		super();
 		this.carsRepository = carsRepository;
@@ -20,18 +23,27 @@ public class CarServiceImpl implements CarService{
 
 
 	@Override
-	public void addCars(int id, Cars cars) {
-		cars.setId(2);
-		cars.setCar_class("high");
-		cars.setCost(25);
-		cars.setMark("ford");
-		cars.setModel("sedan");
+	public Cars addCars(Cars cars) {
 		
-		Cars car=carsRepository.findById(id);
 		
-		carsRepository.save(car);
+		Cars car=carsRepository.save(cars);
+		return car;
+		
 		
 	}
+
+
+
+	@Override
+	public List<Cars> showCars() {
+		
+		List<Cars> car=carsRepository.findAll();
+		
+		return car;
+	}
+
+
+
 	
 
 }
