@@ -18,7 +18,7 @@ public class BookingServiceImplements implements BookingService {
 		this.userRepository=userRepository;
 		this.bookingRepository=bookingRepository;
 	}
-	
+	/*
 	@Override
 	public Booking addBooking(Booking booking ){
 		User user= userRepository.findbyUserId(booking.getUserId());
@@ -29,6 +29,14 @@ public class BookingServiceImplements implements BookingService {
 		return booking;
 	}
 	
-	
+	*/
+
+
+
+	@Override
+	public Booking addBooking(Booking booking) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
