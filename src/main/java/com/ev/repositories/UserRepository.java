@@ -7,5 +7,6 @@ import com.ev.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, String>  {
-
+	User findByUserNameAndPassword(String userName,String password);
+	User findByUserName(String userName);
 }

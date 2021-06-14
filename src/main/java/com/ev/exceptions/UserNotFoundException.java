@@ -1,5 +1,9 @@
 package com.ev.exceptions;
 
-public class UserNotFoundException {
-
+public class UserNotFoundException extends Exception {
+	public UserNotFoundException() {
+	}
+	public UserNotFoundException(String desc) {
+		super(desc);
+	}
 }
