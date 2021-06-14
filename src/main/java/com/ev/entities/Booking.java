@@ -1,5 +1,7 @@
 package com.ev.entities;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,9 +17,9 @@ public class Booking {
 	private String driver;
 	private int bill;
 	private String status;
-	private int start_date;
-	private int end_date;
-	public Booking(int userId, String driver, int bill, String status, int start_date, int end_date){
+	private Date start_date;
+	private Date end_date;
+	public Booking(int userId, String driver, int bill, String status, Date start_date, Date end_date){
 		super();
 		
 		this.userId = userId;
@@ -58,16 +60,16 @@ public class Booking {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public int getStart_date() {
+	public Date getStart_date() {
 		return start_date;
 	}
-	public void setStart_date(int start_date) {
+	public void setStart_date(Date start_date) {
 		this.start_date = start_date;
 	}
-	public int getEnd_date() {
+	public Date getEnd_date() {
 		return end_date;
 	}
-	public void setEnd_date(int end_date) {
+	public void setEnd_date(Date end_date) {
 		this.end_date = end_date;
 	}
 	
