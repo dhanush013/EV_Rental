@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ev.entities.Feedback;
+import com.ev.entities.User;
 import com.ev.repositories.FeedbackRepository;
 import com.ev.services.FeedbackService;
 
@@ -38,7 +39,7 @@ public class FeedbackController {
 	}
 	
 	@GetMapping("/getFeedback")
-	public ResponseEntity<ArrayList<Feedback>> getFeedback(@RequestParam int userId){
+	public ResponseEntity<ArrayList<Feedback>> getFeedback(@RequestParam User userId){
 	
 		return new ResponseEntity<ArrayList<Feedback>>(feedbackService.getFeedback(userId),HttpStatus.FOUND);
 	
@@ -49,4 +50,4 @@ public class FeedbackController {
 		return new ResponseEntity<List<Feedback>>(feedbackRepository.findAll(),HttpStatus.FOUND);
 	
 	}
-
+}
