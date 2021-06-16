@@ -27,7 +27,7 @@ public class UserController {
 		User user1=userService.registerUser(user);
 		return new ResponseEntity<User>(user1,HttpStatus.CREATED);
 	}
-	@PostMapping("/login")
+	@PostMapping("/login1")
 	public ResponseEntity<AuthResponse> login(@RequestBody User user) throws UserNotFoundException{
 		AuthResponse authReponse=userService.validate(user);
 		return new ResponseEntity<AuthResponse>(authReponse,HttpStatus.OK);
