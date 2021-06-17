@@ -18,7 +18,7 @@ public class Feedback {
 	private Long id;
 	
 	@Column(name="text_field",length=128)
-	private String textField;
+	private String name;
 	
 	@Column(name="rating")
 	private int rating;
@@ -32,10 +32,10 @@ public class Feedback {
 		
 	}
 	
-	public Feedback(String textField,int rating,User userId)
+	public Feedback(String name,int rating,User userId)
 	{
 		super();
-		this.textField=textField;
+		this.name=name;
 		this.rating=rating;
 		this.userId=userId;
 	}
@@ -48,12 +48,12 @@ public class Feedback {
 		this.id = id;
 	}
 
-	public String getTextField() {
-		return textField;
+	public String getName() {
+		return name;
 	}
 
-	public void setTextField(String textField) {
-		this.textField = textField;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getRating() {
