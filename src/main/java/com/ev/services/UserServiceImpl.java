@@ -24,18 +24,18 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public AuthResponse validate(User user) throws UserNotFoundException {
-		AuthResponse authResponse= null;
-		User user1= userRepo.findByEmailIdAndPassword(user.getEmailId(), user.getPassword());
+		AuthResponse authReponse = null;
+		User user1=userRepo.findByUserNameAndPassword(user.getUserName(), user.getPassword());
 		if(user1!=null) {
-			authResponse = new AuthResponse();
-			authResponse.setUserName(user1.getUserName());
-			authResponse.setEmailId(user1.getEmailId());
-			authResponse.setAuthenticationStatus(true);
-			authResponse.setAdmin(user1.getRole()=="admin");
-			return authResponse;
+			authReponse=new AuthResponse();
+			authReponse.setUserName(user1.getUserName());
+			authReponse.setAuthenticationStatus(true);
+			authReponse.setRole(user1.getRole());
+			return authReponse;
 		}
-		else {
-			throw new UserNotFoundException("User not found with emailId and password");
+		else
+		{
+			throw new UserNotFoundException("User not found with username and password");
 		}
 	}
 
