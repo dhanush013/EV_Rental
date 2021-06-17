@@ -2,13 +2,23 @@ package com.ev.model;
 
 public class AuthResponse {
 	private String userName;
-	private String emailId;
+	private String role;
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	private boolean authenticationStatus;
-	private boolean admin;
 	public AuthResponse() {
 		// TODO Auto-generated constructor stub
 	}
-	
+	public AuthResponse(String userName,String role, boolean authenticationStatus) {
+		super();
+		this.userName = userName;
+		this.role=role;
+		this.authenticationStatus = authenticationStatus;
+	}
 	public String getUserName() {
 		return userName;
 	}
@@ -20,28 +30,6 @@ public class AuthResponse {
 	}
 	public void setAuthenticationStatus(boolean authenticationStatus) {
 		this.authenticationStatus = authenticationStatus;
-	}
-	public String getEmailId() {
-		return emailId;
-	}
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-
-	public AuthResponse(String userName, String emailId, boolean authenticationStatus) {
-		super();
-		this.userName = userName;
-		this.emailId = emailId;
-		this.authenticationStatus = authenticationStatus;
-	}
-
-	public boolean isAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
 	}
 	
 
