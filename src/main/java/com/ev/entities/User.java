@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="car_rental.users")
+@Table(name="users")
 public class User {
 	
 	@Id
@@ -15,11 +15,11 @@ public class User {
 	private int id;
 	private String userName;
 	private String password;
-	private String firstname;
-	private String lastname;
-	private String email;
+	private String firstName;
+	private String lastName;
+	private String emailId;
 	private String role;
-	private int phone;
+	private long phoneNumber;
 	
 	public User() {
 
@@ -49,28 +49,28 @@ public class User {
 		this.password = password;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
 	public String getRole() {
@@ -81,24 +81,24 @@ public class User {
 		this.role = role;
 	}
 
-	public int getPhone() {
-		return phone;
+	public long getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setPhone(int phone) {
-		this.phone = phone;
+	public void setPhoneNumber(long phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
-	public User(String userName, String password, String firstname, String lastname, String email, String role,
-			int phone) {
+	public User(String userName, String password, String firstName, String lastName, String emailId, String role,
+			long phoneNumber) {
 		super();
 		this.userName = userName;
 		this.password = password;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.email = email;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
 		this.role = role;
-		this.phone = phone;
+		this.phoneNumber = phoneNumber;
 	}
 	
 	

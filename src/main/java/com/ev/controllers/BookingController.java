@@ -1,4 +1,4 @@
-package com.ev.controllers;
+/*package com.ev.controllers;
 
 	import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ev.entities.Booking;
 import com.ev.exceptions.UserNotFoundException;
 import com.ev.repositories.BookingRepository;
-	import com.ev.services.BookingService;
+import com.ev.repositories.UserRepository;
+import com.ev.services.BookingService;
 
 	
 
@@ -31,6 +32,8 @@ import com.ev.repositories.BookingRepository;
 		private BookingService bookingService;
 		@Autowired
 		private BookingRepository bookingRepository;
+		@Autowired
+		private UserRepository userRepository;
 		public BookingController(BookingService bookingService, BookingRepository bookingRepository) {
 			super();
 			this.bookingService = bookingService;
@@ -50,11 +53,11 @@ import com.ev.repositories.BookingRepository;
 		}
 		@GetMapping("/view")
 		public ResponseEntity<List<Booking>> view(@RequestParam int id){
-				List<Booking> b=bookingRepository.findByUserId(id);
+				List<Booking> b=bookingRepository.findByUser(userRepository.findById(id));
 			
 				return new ResponseEntity<List<Booking>>(b,HttpStatus.FOUND);
 			
 		}
 		
 
-	}
+	}*/

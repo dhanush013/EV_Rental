@@ -10,5 +10,5 @@ public interface CarService {
 	Cars addCars(Cars cars);
 	List<Cars> showCars();
 	String removeCars(int id) throws CarsNotFoundException;
-	String updateCars(int id,Cars cars) throws CarsNotFoundException;
+	//String updateCars(int id,Cars cars) throws CarsNotFoundException;
 }
