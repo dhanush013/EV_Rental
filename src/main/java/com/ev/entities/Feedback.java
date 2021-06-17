@@ -21,7 +21,7 @@ public class Feedback {
 	private String name;
 	
 	@Column(name="rating")
-	private int rating;
+	private String rating;
 	
 	@ManyToOne
 	@JoinColumn(name="user_Id")
@@ -32,7 +32,7 @@ public class Feedback {
 		
 	}
 	
-	public Feedback(String name,int rating,User userId)
+	public Feedback(String name,String rating,User userId)
 	{
 		super();
 		this.name=name;
@@ -56,11 +56,11 @@ public class Feedback {
 		this.name = name;
 	}
 
-	public int getRating() {
+	public String getRating() {
 		return rating;
 	}
 
-	public void setRating(int rating) {
+	public void setRating(String rating) {
 		this.rating = rating;
 	}
 
