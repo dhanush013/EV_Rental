@@ -1,6 +1,7 @@
-package com.ev.services;
+/*package com.ev.services;
 
 import java.util.Date;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import com.ev.entities.Booking;
@@ -30,7 +31,7 @@ public class BookingServiceImplements implements BookingService {
 	@Override
 	public Booking addBooking(Booking booking )
 	 {
-		Cars cars=carsRepository.findById(booking.getCars().getId());
+		Optional<Cars> cars=carsRepository.findById(booking.getCars().getId());
 
 		
 		if(booking.getDriver()!=false) {
@@ -56,4 +57,4 @@ public class BookingServiceImplements implements BookingService {
 	
 	
 
-}
+}*/

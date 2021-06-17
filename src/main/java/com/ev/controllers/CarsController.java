@@ -54,7 +54,7 @@ public ResponseEntity<Cars> remove(@PathVariable("id") int id) {
 	}
 	
 }
-@PutMapping("update/{id}")
+/*@PutMapping("update/{id}")
 public ResponseEntity<Cars> update(@PathVariable("id") int id,@RequestBody Cars cars){
 	
 	try {
@@ -66,7 +66,7 @@ public ResponseEntity<Cars> update(@PathVariable("id") int id,@RequestBody Cars 
 	}
 	
 	
-}
+}*/
 
 
 

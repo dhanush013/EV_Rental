@@ -1,9 +1,12 @@
 package com.ev.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Cars 
@@ -16,7 +19,8 @@ public class Cars
    private String mark;
    private String car_class;
    private int cost;
-   
+ 
+  
    public Cars() {
 	   
    }

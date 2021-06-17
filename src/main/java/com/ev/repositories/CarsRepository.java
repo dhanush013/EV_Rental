@@ -15,8 +15,8 @@ import antlr.collections.List;
 public interface CarsRepository extends JpaRepository<Cars,Integer>{
 	
 	
-	@Modifying
+	/*@Modifying
 	@Query("update Cars u set u.model = ?1,u.mark=?2,u.car_class=?3,u.cost = ?4 where u.id = ?5")
 	void setUserInfoById(String model, String mark,String car_class,int cost, int Id);
-	Cars findById( int id);
+	Cars findById( int id);*/
 }

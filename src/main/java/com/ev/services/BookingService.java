@@ -1,4 +1,4 @@
-package com.ev.services;
+/*package com.ev.services;
 
 import com.ev.entities.Booking;
 
@@ -11,3 +11,4 @@ public interface BookingService {
 
 	List displayAllBookings();
 	}
+*/

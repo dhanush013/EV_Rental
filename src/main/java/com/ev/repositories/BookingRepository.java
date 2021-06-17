@@ -1,4 +1,4 @@
-package com.ev.repositories;
+/*package com.ev.repositories;
 
 
 import java.util.List;
@@ -18,3 +18,4 @@ public interface BookingRepository extends JpaRepository<Booking, Integer> {
 	@Query("select count(cars from booking (userId=Distinct))")
 	Booking findById(int bookingId) ;
 	}
+*/
