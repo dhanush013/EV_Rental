@@ -1,30 +1,45 @@
 package com.ev.model;
 
 public class Login {
-	private String username;
+	private String userName;
+	private String emailId;
 	private String password;
-	
-	public Login() {
-		super();
+
+	public String getUserName() {
+		return userName;
 	}
-	
-	public Login(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-	
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Login() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public Login(String userName, String emailId, String password) {
+		super();
+		this.userName = userName;
+		this.emailId = emailId;
+		this.password = password;
+	}
+
+	
 	
 }
