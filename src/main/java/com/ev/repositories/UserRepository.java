@@ -9,5 +9,6 @@ import com.ev.entities.User;
 public interface UserRepository extends JpaRepository<User, String>  {
 	User findByUserNameAndPassword(String userName,String password);
 	User findByUserName(String userName);
+	User findByEmailIdAndPassword(String emailId,String password);
 	User findById(int id);
 }

@@ -24,14 +24,17 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public AuthResponse validate(User user) throws UserNotFoundException {
-		AuthResponse authReponse = null;
-		User user1=userRepo.findByUserNameAndPassword(user.getUserName(), user.getPassword());
+		AuthResponse authResponse = null;
+		User user1=userRepo.findByEmailIdAndPassword(user.getEmailId(), user.getPassword());
 		if(user1!=null) {
-			authReponse=new AuthResponse();
-			authReponse.setUserName(user1.getUserName());
-			authReponse.setAuthenticationStatus(true);
-			authReponse.setRole(user1.getRole());
-			return authReponse;
+			authResponse=new AuthResponse();
+			authResponse.setUserName(user1.getUserName());
+			authResponse.setEmailId(user1.getEmailId());
+			authResponse.setAuthenticationStatus(true);
+			if(user1.getRole()!=null) {
+				authResponse.setAdmin(user1.getRole().equals("admin"));
+			}
+			return authResponse;
 		}
 		else
 		{
